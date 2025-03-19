@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.form-card {
+  @apply max-w-2xl h-full min-h-[95vh] flex items-center justify-center flex-col w-full mx-auto;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+label {
+  @apply text-sm   capitalize;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.form {
+  @apply p-6 bg-white rounded-lg shadow-lg w-full;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+input {
+  @apply border border-zinc-400 text-sm outline-none py-3 px-4 w-full rounded-md;
+}
+textarea {
+  @apply border border-zinc-400 text-sm outline-none py-3 px-4 w-full rounded-md min-h-[90px] max-h-[120px];
+}
+.title {
+  @apply text-2xl font-bold mb-4;
+}
+
+.submit-button {
+  @apply px-4 py-2 bg-blue-600 cursor-pointer text-white rounded-md w-full hover:bg-blue-700 transition;
+}
+
+.back-button {
+  @apply px-4 py-2 cursor-pointer bg-zinc-400 text-white rounded-md w-full transition;
+}
+
+.error-message {
+  @apply text-red-600 text-xs;
 }
