@@ -42,7 +42,7 @@ export default function GeneratePDF() {
       try {
         setCustomerData(JSON.parse(storedCustomerData));
       } catch (error) {
-        console.error("Error parsing customer value:", error);
+        console.error("Error  customer value:", error);
       }
     }
 
